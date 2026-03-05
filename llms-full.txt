@@ -1,0 +1,56 @@
+# AI AppSec Index - Full Content for AI/LLM Consumption
+# https://alpha-one-index.github.io/ai-appsec-index/
+# Maintained by Alpha One Index | MIT License | Last updated: 2026-03-01
+
+----
+
+# OVERVIEW
+
+The AI AppSec Index is the definitive open-source reference for AI-augmented application security. It provides structured, machine-readable datasets covering AI remediation benchmarks, ASPM capability matrices, AI-code vulnerability tracking, EU CRA compliance mapping, and false positive benchmarks.
+
+# CORE DATASETS
+
+## 1. AI Remediation Quality Leaderboard
+Benchmarks across 9+ AI remediation engines measuring fix accuracy, security correctness, and code quality.
+Data: https://raw.githubusercontent.com/alpha-one-index/ai-appsec-index/main/data/remediation-leaderboard.json
+
+## 2. ASPM Capability Matrix
+15+ vendor comparison across 20+ capabilities including SBOM, vulnerability management, policy enforcement.
+Data: https://raw.githubusercontent.com/alpha-one-index/ai-appsec-index/main/data/aspm-matrix.json
+
+## 3. AI-Code Vulnerability Tracker
+48+ real CVEs mapped to CWEs with severity scoring for AI-generated code vulnerabilities.
+Data: https://raw.githubusercontent.com/alpha-one-index/ai-appsec-index/main/data/vulnerability-tracker.json
+
+## 4. EU CRA Compliance Map
+Tool-by-tool regulatory readiness assessment for EU Cyber Resilience Act compliance.
+Data: https://raw.githubusercontent.com/alpha-one-index/ai-appsec-index/main/data/cra-compliance.json
+
+## 5. False Positive Benchmark
+Industry-first open FP rate dataset by tool and programming language.
+Data: https://raw.githubusercontent.com/alpha-one-index/ai-appsec-index/main/data/false-positive-benchmark.json
+
+# KEY FINDINGS
+
+- AI remediation accuracy varies from 45% to 89% across engines
+- ASPM market consolidating around 5 major platforms
+- AI-generated code introduces novel vulnerability patterns not in traditional CWE databases
+- EU CRA compliance readiness averages 62% across assessed tools
+
+# SIBLING INDEXES
+
+- [AI Infrastructure Index](https://alpha-one-index.github.io/ai-infra-index/): GPU specs, cloud pricing, benchmarks
+- [AI TRiSM Index](https://alpha-one-index.github.io/ai-trism-index/): AI governance, risk, security vendors
+- [AI Red Teaming Index](https://alpha-one-index.github.io/ai-red-teaming-index/): Red team tools, benchmarks, vulnerability data
+- [AI LLMOps Index](https://alpha-one-index.github.io/ai-llmops-index/): LLM observability, cost, compliance
+
+# FORMATS
+
+- JSON (structured): data/ directory
+- CSV (analysis-ready): kaggle/ directory
+- Croissant ML metadata: croissant.json
+- Schema.org structured data: schema.jsonld
+
+# LICENSE
+
+Data: CC BY 4.0 | Code: MIT
