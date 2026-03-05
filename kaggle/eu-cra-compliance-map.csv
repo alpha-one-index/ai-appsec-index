@@ -1,0 +1,25 @@
+requirement_id,article,title,annex_reference,appsec_relevance,vendor,coverage,capability
+CRA-Art13-1,Article 13(1),Security by Design,"Annex I, Part I",High,Snyk,Full,"SAST, SCA, container security integrated into SDLC"
+CRA-Art13-1,Article 13(1),Security by Design,"Annex I, Part I",High,ArmorCode,Full,ASPM orchestration across development lifecycle
+CRA-Art13-1,Article 13(1),Security by Design,"Annex I, Part I",High,Semgrep,Partial,Code analysis with custom rules for security patterns
+CRA-Art13-1,Article 13(1),Security by Design,"Annex I, Part I",High,Mend.io,Partial,SCA and license compliance for open source components
+CRA-Art13-6,Article 13(6),Vulnerability Handling,"Annex I, Part II",Critical,Snyk,Full,Automated vulnerability database with fix PRs
+CRA-Art13-6,Article 13(6),Vulnerability Handling,"Annex I, Part II",Critical,Endor Labs,Full,Reachability analysis for dependency vulnerabilities
+CRA-Art13-6,Article 13(6),Vulnerability Handling,"Annex I, Part II",Critical,Aikido Security,Full,All-in-one with AI autofix for vulnerabilities
+CRA-Art13-6,Article 13(6),Vulnerability Handling,"Annex I, Part II",Critical,OX Security,Full,Pipeline-level vulnerability tracking and correlation
+CRA-Art13-12,Article 13(12),SBOM Requirement,"Annex I, Part II, Section 1",Critical,Snyk,Full,SBOM generation in CycloneDX and SPDX formats
+CRA-Art13-12,Article 13(12),SBOM Requirement,"Annex I, Part II, Section 1",Critical,OX Security,Full,Pipeline BOM (PBOM) beyond standard SBOM
+CRA-Art13-12,Article 13(12),SBOM Requirement,"Annex I, Part II, Section 1",Critical,Endor Labs,Full,Dependency lifecycle management with SBOM
+CRA-Art13-12,Article 13(12),SBOM Requirement,"Annex I, Part II, Section 1",Critical,Mend.io,Full,SBOM generation and continuous monitoring
+CRA-Art14,Article 14,Reporting Obligations,N/A,High,ArmorCode,Partial,Vulnerability prioritization with exploitability data
+CRA-Art14,Article 14,Reporting Obligations,N/A,High,Phoenix Security,Partial,Compliance reporting with EU regulation mapping
+CRA-Art14,Article 14,Reporting Obligations,N/A,High,Apiiro,Partial,Risk-based alerting for critical vulnerabilities
+CRA-AnnexI-2,"Annex I, Part I, (2)",Secure Default Configuration,"Annex I, Part I, (2)",Medium,Semgrep,Partial,Configuration analysis rules
+CRA-AnnexI-2,"Annex I, Part I, (2)",Secure Default Configuration,"Annex I, Part I, (2)",Medium,Snyk,Partial,IaC security scanning for misconfigurations
+CRA-AnnexI-2,"Annex I, Part I, (2)",Secure Default Configuration,"Annex I, Part I, (2)",Medium,Cycode,Partial,Hardcoded secret detection and config analysis
+CRA-AnnexI-3,"Annex I, Part I, (3)",Data Protection,"Annex I, Part I, (3)",High,Snyk,Partial,Code analysis for data handling patterns
+CRA-AnnexI-3,"Annex I, Part I, (3)",Data Protection,"Annex I, Part I, (3)",High,Semgrep,Partial,Custom rules for PII exposure detection
+CRA-AnnexI-3,"Annex I, Part I, (3)",Data Protection,"Annex I, Part I, (3)",High,Aikido Security,Partial,Secret detection and data leak prevention
+CRA-AnnexI-5,"Annex I, Part I, (5)",Minimize Attack Surface,"Annex I, Part I, (5)",High,Apiiro,Full,Application risk graph with attack surface mapping
+CRA-AnnexI-5,"Annex I, Part I, (5)",Minimize Attack Surface,"Annex I, Part I, (5)",High,ArmorCode,Full,Cross-tool correlation identifies full attack surface
+CRA-AnnexI-5,"Annex I, Part I, (5)",Minimize Attack Surface,"Annex I, Part I, (5)",High,OX Security,Partial,Pipeline and dependency attack surface analysis
