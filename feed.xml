@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AI AppSec Index Updates</title>
+  <link>https://alpha-one-index.github.io/ai-appsec-index/</link>
+  <atom:link href="https://alpha-one-index.github.io/ai-appsec-index/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Updates to the AI AppSec Index - AI remediation benchmarks, ASPM matrices, CVE tracking, CRA compliance, false positive datasets.</description>
+  <language>en-us</language>
+  <lastBuildDate>Wed, 05 Mar 2026 08:00:00 PST</lastBuildDate>
+  <item>
+    <title>v1.0.0 - AI AppSec Index Initial Release</title>
+    <link>https://github.com/alpha-one-index/ai-appsec-index/releases/tag/v1.0.0</link>
+    <guid>https://github.com/alpha-one-index/ai-appsec-index/releases/tag/v1.0.0</guid>
+    <pubDate>Wed, 05 Mar 2026 08:00:00 PST</pubDate>
+    <description>Initial release with 6 datasets: AI Remediation Leaderboard, ASPM Capability Matrix, AI-Code Vulnerability Tracker (48+ CVEs), EU CRA Compliance Map with timeline tracker, False Positive Benchmarks. Includes interactive dashboard, Python package, Kaggle and HuggingFace distribution.</description>
+  </item>
+  <item>
+    <title>CRA Timeline Tracker Added</title>
+    <link>https://github.com/alpha-one-index/ai-appsec-index/blob/main/data/cra-timeline.json</link>
+    <guid>https://github.com/alpha-one-index/ai-appsec-index/blob/main/data/cra-timeline.json</guid>
+    <pubDate>Wed, 05 Mar 2026 07:00:00 PST</pubDate>
+    <description>New CRA compliance timeline tracker with key dates (Sept 11 2026 reporting deadline, Dec 11 2027 full compliance), 7 requirement mappings to AppSec tools, and penalty information.</description>
+  </item>
+  <item>
+    <title>48 Real CVEs Added to AI-Code Vulnerability Tracker</title>
+    <link>https://github.com/alpha-one-index/ai-appsec-index/blob/main/data/ai-code-vulnerabilities.json</link>
+    <guid>https://github.com/alpha-one-index/ai-appsec-index/blob/main/data/ai-code-vulnerabilities.json</guid>
+    <pubDate>Wed, 05 Mar 2026 06:00:00 PST</pubDate>
+    <description>Expanded vulnerability dataset to 48 real CVEs across 8 CWE categories, covering AI code generation tools including Copilot, ChatGPT, CodeWhisperer, and Tabnine.</description>
+  </item>
+</channel>
+</rss>
