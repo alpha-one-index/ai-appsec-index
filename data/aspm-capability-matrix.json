@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "title": "ASPM Capability Matrix",
+    "description": "Application Security Posture Management vendor capability comparison mapped to Gartner ASPM framework",
+    "version": "1.0.0",
+    "last_updated": "2025-06-01",
+    "methodology": "Capabilities assessed via vendor documentation, analyst reports, and independent evaluations. Scores 0-100 per capability.",
+    "framework": "Gartner Application Security Posture Management Reference Architecture 2024",
+    "cross_references": [
+      "https://github.com/alpha-one-index/ai-infra-index",
+      "https://github.com/alpha-one-index/ai-codegen-index"
+    ]
+  },
+  "capability_definitions": [
+    {"id": "asset_discovery", "name": "Asset Discovery", "description": "Automatic discovery and inventory of application assets, APIs, and code repositories"},
+    {"id": "vulnerability_correlation", "name": "Vulnerability Correlation", "description": "Cross-tool deduplication and correlation of findings from SAST, DAST, SCA, and other scanners"},
+    {"id": "risk_prioritization", "name": "Risk-Based Prioritization", "description": "AI/ML-driven risk scoring considering exploitability, business context, and reachability"},
+    {"id": "remediation_orchestration", "name": "Remediation Orchestration", "description": "Automated fix suggestions, PR generation, and developer workflow integration"},
+    {"id": "policy_enforcement", "name": "Policy Enforcement", "description": "Custom security policies with automated enforcement across CI/CD pipelines"},
+    {"id": "compliance_mapping", "name": "Compliance Mapping", "description": "Mapping findings to regulatory frameworks (SOC2, ISO 27001, PCI-DSS, CRA)"},
+    {"id": "sbom_management", "name": "SBOM Management", "description": "Software Bill of Materials generation, ingestion, and lifecycle tracking"},
+    {"id": "ai_code_detection", "name": "AI-Generated Code Detection", "description": "Ability to identify and flag vulnerabilities specific to AI-generated code patterns"}
+  ],
+  "vendors": [
+    {
+      "vendor": "ArmorCode",
+      "product": "ArmorCode ASPM Platform",
+      "funding_total": "$78M",
+      "valuation": "Undisclosed",
+      "headquarters": "Palo Alto, CA",
+      "founded": 2021,
+      "capabilities": {
+        "asset_discovery": 85,
+        "vulnerability_correlation": 90,
+        "risk_prioritization": 88,
+        "remediation_orchestration": 80,
+        "policy_enforcement": 85,
+        "compliance_mapping": 82,
+        "sbom_management": 78,
+        "ai_code_detection": 60
+      },
+      "overall_score": 81.0,
+      "gartner_recognition": "Representative Vendor, Gartner Market Guide for ASPM 2024",
+      "source_url": "https://www.armorcode.com",
+      "source_date": "2025-04-15",
+      "notes": "Pioneer in ASPM category; strong correlation engine"
+    },
+    {
+      "vendor": "Apiiro",
+      "product": "Apiiro Cloud Application Security Platform",
+      "funding_total": "$100M",
+      "valuation": "Undisclosed",
+      "headquarters": "Tel Aviv, Israel",
+      "founded": 2019,
+      "capabilities": {
+        "asset_discovery": 88,
+        "vulnerability_correlation": 85,
+        "risk_prioritization": 92,
+        "remediation_orchestration": 78,
+        "policy_enforcement": 80,
+        "compliance_mapping": 75,
+        "sbom_management": 82,
+        "ai_code_detection": 70
+      },
+      "overall_score": 81.3,
+      "gartner_recognition": "Representative Vendor, Gartner Market Guide for ASPM 2024",
+      "source_url": "https://apiiro.com",
+      "source_date": "2025-03-20",
+      "notes": "Risk graph approach; deep code analysis with design-to-code visibility"
+    },
+    {
+      "vendor": "OX Security",
+      "product": "OX Active ASPM Platform",
+      "funding_total": "$60M",
+      "valuation": "Undisclosed",
+      "headquarters": "Tel Aviv, Israel",
+      "founded": 2021,
+      "capabilities": {
+        "asset_discovery": 82,
+        "vulnerability_correlation": 86,
+        "risk_prioritization": 84,
+        "remediation_orchestration": 82,
+        "policy_enforcement": 80,
+        "compliance_mapping": 78,
+        "sbom_management": 85,
+        "ai_code_detection": 65
+      },
+      "overall_score": 80.3,
+      "gartner_recognition": "Representative Vendor, Gartner Market Guide for ASPM 2024",
+      "source_url": "https://www.ox.security",
+      "source_date": "2025-02-10",
+      "notes": "Active ASPM with pipeline bill of materials (PBOM)"
+    },
+    {
+      "vendor": "Cycode",
+      "product": "Cycode Complete ASPM",
+      "funding_total": "$80M",
+      "valuation": "Undisclosed",
+      "headquarters": "Tel Aviv, Israel",
+      "founded": 2019,
+      "capabilities": {
+        "asset_discovery": 80,
+        "vulnerability_correlation": 82,
+        "risk_prioritization": 80,
+        "remediation_orchestration": 85,
+        "policy_enforcement": 83,
+        "compliance_mapping": 76,
+        "sbom_management": 80,
+        "ai_code_detection": 62
+      },
+      "overall_score": 78.5,
+      "gartner_recognition": "Representative Vendor, Gartner Market Guide for ASPM 2024",
+      "source_url": "https://cycode.com",
+      "source_date": "2025-01-30",
+      "notes": "Complete ASPM with native SAST and SCA scanners"
+    },
+    {
+      "vendor": "Phoenix Security",
+      "product": "Phoenix Security ASPM",
+      "funding_total": "$5M",
+      "valuation": "Undisclosed",
+      "headquarters": "London, UK",
+      "founded": 2020,
+      "capabilities": {
+        "asset_discovery": 75,
+        "vulnerability_correlation": 80,
+        "risk_prioritization": 82,
+        "remediation_orchestration": 72,
+        "policy_enforcement": 70,
+        "compliance_mapping": 78,
+        "sbom_management": 68,
+        "ai_code_detection": 55
+      },
+      "overall_score": 72.5,
+      "gartner_recognition": "Emerging Vendor",
+      "source_url": "https://phoenix.security",
+      "source_date": "2025-03-01",
+      "notes": "UK-based ASPM with strong compliance mapping for EU regulations"
+    },
+    {
+      "vendor": "Kondukto",
+      "product": "Kondukto ASPM",
+      "funding_total": "$6.4M",
+      "valuation": "Undisclosed",
+      "headquarters": "San Francisco, CA",
+      "founded": 2020,
+      "capabilities": {
+        "asset_discovery": 72,
+        "vulnerability_correlation": 78,
+        "risk_prioritization": 75,
+        "remediation_orchestration": 70,
+        "policy_enforcement": 76,
+        "compliance_mapping": 72,
+        "sbom_management": 65,
+        "ai_code_detection": 50
+      },
+      "overall_score": 69.8,
+      "gartner_recognition": "Emerging Vendor",
+      "source_url": "https://kondukto.io",
+      "source_date": "2025-02-15",
+      "notes": "Developer-centric ASPM with strong CI/CD integration"
+    },
+    {
+      "vendor": "Snyk",
+      "product": "Snyk AppRisk",
+      "funding_total": "$1.1B",
+      "valuation": "$7.4B",
+      "headquarters": "Boston, MA",
+      "founded": 2015,
+      "capabilities": {
+        "asset_discovery": 88,
+        "vulnerability_correlation": 82,
+        "risk_prioritization": 85,
+        "remediation_orchestration": 90,
+        "policy_enforcement": 85,
+        "compliance_mapping": 80,
+        "sbom_management": 85,
+        "ai_code_detection": 72
+      },
+      "overall_score": 83.4,
+      "gartner_recognition": "Leader, Gartner Magic Quadrant for Application Security Testing 2024",
+      "source_url": "https://snyk.io/product/snyk-apprisk/",
+      "source_date": "2025-05-10",
+      "notes": "Largest developer security vendor; AppRisk is ASPM layer added 2023"
+    },
+    {
+      "vendor": "Semgrep",
+      "product": "Semgrep Supply Chain + Platform",
+      "funding_total": "$100M",
+      "valuation": "$500M",
+      "headquarters": "San Francisco, CA",
+      "founded": 2020,
+      "capabilities": {
+        "asset_discovery": 78,
+        "vulnerability_correlation": 75,
+        "risk_prioritization": 80,
+        "remediation_orchestration": 82,
+        "policy_enforcement": 88,
+        "compliance_mapping": 70,
+        "sbom_management": 75,
+        "ai_code_detection": 78
+      },
+      "overall_score": 78.3,
+      "gartner_recognition": "Notable Vendor",
+      "source_url": "https://semgrep.dev",
+      "source_date": "2025-04-20",
+      "notes": "Code analysis roots; expanding into ASPM with rules-as-code approach"
+    }
+  ]
+}
