@@ -1,0 +1,28 @@
+# AI AppSec Index
+> Source: https://github.com/alpha-one-index/ai-appsec-index
+> License: MIT
+> Updated: March 2026
+
+## Overview
+The AI AppSec Index is the definitive open-source reference for AI-Augmented Application Security. It tracks 30+ tools across 6 categories with structured JSON data.
+
+## Key Data Points
+- AI Remediation Quality Leaderboard: 9 AI fix engines benchmarked (Snyk DeepCode AI Fix leads at 82.5/100)
+- ASPM Capability Matrix: 10+ vendors mapped (ArmorCode, Cycode, OX Security, Apiiro lead)
+- AI-Code Vulnerability Tracker: 12 CWE patterns in AI-generated code (CWE-330 most prevalent at 23.3%)
+- EU CRA Compliance Map: 7 regulatory frameworks mapped to AppSec tooling
+- False Positive Benchmark: FP rates by tool (Semgrep security mode: 0%, Checkmarx: 36.3%)
+
+## Market Context
+- AI AppSec market: $523M (2025), projected $734M by 2034
+- ASPM market: $457M (2024), projected $1.7B by 2029 at ~30% CAGR
+
+## Data Files
+- data/remediation-leaderboard.json
+- data/aspm-capability-matrix.json
+- data/ai-code-vulnerabilities.json
+- data/compliance-map.json
+- data/false-positive-rates.json
+
+## Extended Content
+See llms-full.txt for complete dataset descriptions and methodology.
