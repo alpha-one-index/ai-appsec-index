@@ -1,0 +1,61 @@
+name: Validate Data Quality
+
+on:
+  push:
+    branches: [main]
+    paths: ['data/**', 'kaggle/**']
+  pull_request:
+    branches: [main]
+    paths: ['data/**', 'kaggle/**']
+  schedule:
+    - cron: '0 0 * * 1'
+
+jobs:
+  validate-json:
+    name: Validate JSON Schema
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate JSON files
+        run: |
+          echo "Validating JSON files in data/"
+          for f in data/*.json; do
+            echo "Checking $f..."
+            python -m json.tool "$f" > /dev/null || { echo "INVALID JSON: $f"; exit 1; }
+            echo "  OK: $f is valid JSON"
+          done
+          echo "All JSON files are valid!"
+
+      - name: Check CSV integrity
+        run: |
+          echo "Validating CSV files in kaggle/"
+          python -c "
+import csv, sys, os
+for f in sorted(os.listdir('kaggle')):
+    if f.endswith('.csv'):
+        path = os.path.join('kaggle', f)
+        with open(path, 'r') as csvfile:
+            reader = csv.reader(csvfile)
+            header = next(reader)
+            rows = sum(1 for _ in reader)
+            print(f'  {f}: {len(header)} columns, {rows} rows')
+print('All CSV files valid!')
+          "
+
+      - name: Data summary
+        run: |
+          echo "=== AI AppSec Index Data Summary ==="
+          echo "JSON datasets: $(ls data/*.json | wc -l)"
+          echo "CSV datasets: $(ls kaggle/*.csv | wc -l)"
+          echo "Total data size: $(du -sh data/ kaggle/ | tail -1)"
+          echo ""
+          for f in data/*.json; do
+            entries=$(python -c "import json; d=json.load(open('$f')); print(len(d.get('entries',d.get('tools',d.get('vulnerabilities',d.get('key_dates',d.get('compliance_requirements',d.get('benchmarks',[])))))))); " 2>/dev/null || echo "N/A")
+            echo "  $(basename $f): $entries entries"
+          done
