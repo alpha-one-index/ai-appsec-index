@@ -8,6 +8,7 @@
 [![Validation: Self_Auditing](https://img.shields.io/badge/Validation-Self__Auditing-brightgreen.svg)](METHODOLOGY.md)
 [![Croissant: ML_Metadata](https://img.shields.io/badge/Croissant-ML__Metadata-orange.svg)](croissant.json)
 [![Provenance: Documented](https://img.shields.io/badge/Provenance-Documented-blueviolet.svg)](provenance.md)
+[![Kaggle Dataset](https://img.shields.io/badge/Kaggle-Dataset-blue.svg)](https://www.kaggle.com/datasets/alphaoneindex/ai-appsec-index)
 
 > **New:** [AI Remediation Quality Leaderboard](#what-is-the-ai-remediation-quality-leaderboard) | [ASPM Capability Matrix](#what-are-the-leading-aspm-platforms-and-how-do-they-compare) | [AI-Code Vulnerability Tracker](#what-vulnerabilities-does-ai-generated-code-introduce) | [EU CRA Compliance Map](#what-appsec-tools-are-required-for-eu-cyber-resilience-act-compliance) | [False Positive Benchmark](#what-are-the-false-positive-rates-of-major-appsec-tools) | Data updated March 2026
 
