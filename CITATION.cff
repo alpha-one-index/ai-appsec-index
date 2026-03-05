@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this dataset in your research, please cite it as below."
+title: "AI AppSec Index: Open AI-Augmented Application Security Intelligence"
+authors:
+  - name: "Alpha One Index"
+version: 1.0.0
+date-released: 2026-03-05
+url: "https://github.com/alpha-one-index/ai-appsec-index"
+repository-code: "https://github.com/alpha-one-index/ai-appsec-index"
+license: MIT
+keywords:
+  - application-security
+  - ai-security
+  - appsec
+  - sast
+  - aspm
+  - vulnerability-detection
+  - ai-remediation
+  - false-positive-benchmark
+  - cyber-resilience-act
+  - cra-compliance
+abstract: "The definitive open-source reference index for AI-Augmented Application Security -- covering AI remediation quality benchmarking, ASPM capability mapping, AI-generated code vulnerability tracking, regulatory compliance mapping, and false positive rate datasets for AppSec tools in production."
+type: dataset
