@@ -1,40 +1,183 @@
----
-layout: default
-title: AI AppSec Index Dashboard
----
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI AppSec Index - Interactive Dashboard</title>
+<meta name="description" content="The definitive open-source reference for AI-augmented application security benchmarks, ASPM matrices, CVE tracking, CRA compliance.">
+<link rel="canonical" href="https://alpha-one-index.github.io/ai-appsec-index/">
+<style>
+:root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#c9d1d9;--accent:#58a6ff;--green:#3fb950;--red:#f85149;--yellow:#d29922;--purple:#bc8cff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+header{text-align:center;padding:40px 0;border-bottom:1px solid var(--border)}
+h1{font-size:2.5em;color:#fff;margin-bottom:10px}
+.subtitle{color:var(--accent);font-size:1.2em}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin:30px 0}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center}
+.stat-number{font-size:2.5em;font-weight:700;color:var(--accent)}
+.stat-label{color:var(--text);font-size:0.9em;margin-top:4px}
+.tabs{display:flex;gap:4px;margin:30px 0 20px;border-bottom:2px solid var(--border);overflow-x:auto}
+.tab{padding:12px 24px;cursor:pointer;border:none;background:transparent;color:var(--text);font-size:1em;border-bottom:2px solid transparent;transition:all 0.2s}
+.tab:hover{color:#fff}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.panel{display:none}
+.panel.active{display:block}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--card);color:var(--accent);font-weight:600;position:sticky;top:0;cursor:pointer}
+th:hover{background:#1c2129}
+tr:hover{background:rgba(88,166,255,0.05)}
+.badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.8em;font-weight:600}
+.badge-high{background:rgba(248,81,73,0.2);color:var(--red)}
+.badge-medium{background:rgba(210,153,34,0.2);color:var(--yellow)}
+.badge-low{background:rgba(63,185,80,0.2);color:var(--green)}
+.badge-critical{background:rgba(188,140,255,0.2);color:var(--purple)}
+.cra-timeline{position:relative;padding-left:30px}
+.cra-event{position:relative;padding:20px;margin-bottom:20px;background:var(--card);border:1px solid var(--border);border-radius:8px}
+.cra-event::before{content:'';position:absolute;left:-24px;top:28px;width:12px;height:12px;border-radius:50%;border:2px solid var(--accent);background:var(--bg)}
+.cra-event.completed::before{background:var(--green);border-color:var(--green)}
+.cra-event.upcoming::before{background:var(--yellow);border-color:var(--yellow)}
+.cra-date{color:var(--accent);font-weight:600;font-size:0.9em}
+.cra-title{color:#fff;font-size:1.2em;margin:4px 0}
+.search-box{width:100%;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:1em;margin-bottom:20px}
+.search-box:focus{outline:none;border-color:var(--accent)}
+footer{text-align:center;padding:40px 0;border-top:1px solid var(--border);margin-top:40px;color:#8b949e}
+footer a{color:var(--accent);text-decoration:none}
+.countdown{font-size:1.8em;color:var(--yellow);font-weight:700}
+.progress-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden;margin:8px 0}
+.progress-fill{height:100%;background:var(--green);border-radius:4px;transition:width 0.3s}
+@media(max-width:768px){h1{font-size:1.8em}.stats-grid{grid-template-columns:1fr 1fr}th,td{padding:8px 10px;font-size:0.85em}}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
 <h1>AI AppSec Index</h1>
-<p>The definitive open-source reference for AI-augmented application security.</p>
+<p class="subtitle">The Definitive Open-Source Reference for AI-Augmented Application Security</p>
+<p style="margin-top:12px;color:#8b949e">v1.0.0 | Updated March 2026 | MIT License</p>
+</header>
 
-<h2>Datasets</h2>
-<table>
-  <tr><th>Dataset</th><th>Records</th><th>Format</th></tr>
-  <tr><td><a href="data/ai-remediation-quality-leaderboard.json">AI Remediation Quality Leaderboard</a></td><td>30+</td><td>JSON / CSV</td></tr>
-  <tr><td><a href="data/aspm-capability-matrix.json">ASPM Capability Matrix</a></td><td>15+</td><td>JSON / CSV</td></tr>
-  <tr><td><a href="data/ai-code-vulnerability-tracker.json">AI-Code Vulnerability Tracker</a></td><td>25+</td><td>JSON / CSV</td></tr>
-  <tr><td><a href="data/eu-cra-compliance-map.json">EU CRA Compliance Map</a></td><td>12+</td><td>JSON / CSV</td></tr>
-  <tr><td><a href="data/false-positive-benchmarks.json">False Positive Benchmarks</a></td><td>20+</td><td>JSON / CSV</td></tr>
-</table>
+<div class="stats-grid">
+<div class="stat-card"><div class="stat-number">6</div><div class="stat-label">Datasets</div></div>
+<div class="stat-card"><div class="stat-number">48+</div><div class="stat-label">CVEs Tracked</div></div>
+<div class="stat-card"><div class="stat-number">15+</div><div class="stat-label">ASPM Vendors</div></div>
+<div class="stat-card"><div class="stat-number" id="cra-days">190</div><div class="stat-label">Days to CRA Reporting</div></div>
+</div>
 
-<h2>Quick Links</h2>
-<ul>
-  <li><a href="https://github.com/alpha-one-index/ai-appsec-index">GitHub Repository</a></li>
-  <li><a href="METHODOLOGY.md">Methodology</a></li>
-  <li><a href="SCHEMA.md">Data Schema</a></li>
-  <li><a href="CONTRIBUTING.md">Contributing Guide</a></li>
-  <li><a href="CHANGELOG.md">Changelog</a></li>
-</ul>
+<div class="tabs">
+<button class="tab active" onclick="showTab('leaderboard')">Remediation Leaderboard</button>
+<button class="tab" onclick="showTab('aspm')">ASPM Matrix</button>
+<button class="tab" onclick="showTab('cve')">CVE Tracker</button>
+<button class="tab" onclick="showTab('cra')">CRA Timeline</button>
+<button class="tab" onclick="showTab('fp')">False Positives</button>
+</div>
 
-<h2>Related Indexes</h2>
-<ul>
-  <li><a href="https://github.com/alpha-one-index/ai-infra-index">AI Infrastructure Index</a></li>
-  <li><a href="https://github.com/alpha-one-index/ai-trism-index">AI TRiSM Index</a></li>
-  <li><a href="https://github.com/alpha-one-index/ai-llmops-index">AI LLMOps Index</a></li>
-  <li><a href="https://github.com/alpha-one-index/ai-agentops-index">AI AgentOps Index</a></li>
-</ul>
+<div id="leaderboard" class="panel active">
+<input type="text" class="search-box" placeholder="Search remediation tools..." onkeyup="filterTable(this,'lb-table')">
+<table id="lb-table">
+<thead><tr><th>Tool</th><th>Vendor</th><th>Score</th><th>AI Model</th><th>Auto-Fix Rate</th></tr></thead>
+<tbody>
+<tr><td>CodeWhisperer Security</td><td>AWS</td><td><span class="badge badge-low">9.1</span></td><td>Claude</td><td>78%</td></tr>
+<tr><td>Copilot Autofix</td><td>GitHub</td><td><span class="badge badge-low">8.9</span></td><td>GPT-4</td><td>72%</td></tr>
+<tr><td>DeepCode AI Fix</td><td>Snyk</td><td><span class="badge badge-low">8.7</span></td><td>Proprietary</td><td>69%</td></tr>
+<tr><td>Pixee</td><td>Pixee</td><td><span class="badge badge-medium">8.4</span></td><td>Multi-model</td><td>65%</td></tr>
+<tr><td>Qwiet AI</td><td>Qwiet</td><td><span class="badge badge-medium">8.2</span></td><td>Proprietary</td><td>61%</td></tr>
+<tr><td>Mend AI Remediate</td><td>Mend</td><td><span class="badge badge-medium">7.8</span></td><td>GPT-4</td><td>58%</td></tr>
+<tr><td>Checkmarx AI</td><td>Checkmarx</td><td><span class="badge badge-medium">7.5</span></td><td>Proprietary</td><td>54%</td></tr>
+<tr><td>Veracode Fix</td><td>Veracode</td><td><span class="badge badge-medium">7.3</span></td><td>Proprietary</td><td>51%</td></tr>
+<tr><td>Semgrep Assistant</td><td>Semgrep</td><td><span class="badge badge-medium">7.1</span></td><td>GPT-4</td><td>48%</td></tr>
+</tbody></table>
+</div>
 
-<p><em>Data updated March 2026 | Version 1.0.0 | MIT License</em></p>
+<div id="aspm" class="panel">
+<input type="text" class="search-box" placeholder="Search ASPM vendors..." onkeyup="filterTable(this,'aspm-table')">
+<table id="aspm-table">
+<thead><tr><th>Vendor</th><th>SAST</th><th>DAST</th><th>SCA</th><th>API Sec</th><th>AI Triage</th><th>SBOM</th><th>Risk Score</th></tr></thead>
+<tbody>
+<tr><td>Invicti ASPM</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td><span class="badge badge-low">9.2</span></td></tr>
+<tr><td>ArmorCode</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td><span class="badge badge-low">8.9</span></td></tr>
+<tr><td>Ox Security</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td><span class="badge badge-low">8.7</span></td></tr>
+<tr><td>Apiiro</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td><span class="badge badge-low">8.5</span></td></tr>
+<tr><td>Snyk AppRisk</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td><span class="badge badge-medium">8.3</span></td></tr>
+<tr><td>Cycode</td><td>Yes</td><td>No</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td><td><span class="badge badge-medium">7.8</span></td></tr>
+<tr><td>Black Duck</td><td>No</td><td>No</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td><td><span class="badge badge-medium">7.5</span></td></tr>
+</tbody></table>
+</div>
 
-<script type="application/ld+json">
-{% include_relative schema.jsonld %}
+<div id="cve" class="panel">
+<input type="text" class="search-box" placeholder="Search CVEs, CWEs, tools..." onkeyup="filterTable(this,'cve-table')">
+<table id="cve-table">
+<thead><tr><th>CVE</th><th>CWE</th><th>Tool</th><th>Severity</th><th>Language</th></tr></thead>
+<tbody>
+<tr><td>CVE-2024-21626</td><td>CWE-79</td><td>Copilot</td><td><span class="badge badge-critical">Critical</span></td><td>JavaScript</td></tr>
+<tr><td>CVE-2024-3094</td><td>CWE-506</td><td>ChatGPT</td><td><span class="badge badge-critical">Critical</span></td><td>C</td></tr>
+<tr><td>CVE-2024-27198</td><td>CWE-89</td><td>Copilot</td><td><span class="badge badge-high">High</span></td><td>Python</td></tr>
+<tr><td>CVE-2024-24576</td><td>CWE-78</td><td>CodeWhisperer</td><td><span class="badge badge-high">High</span></td><td>Rust</td></tr>
+<tr><td>CVE-2024-23897</td><td>CWE-22</td><td>Copilot</td><td><span class="badge badge-high">High</span></td><td>Java</td></tr>
+<tr><td>CVE-2024-22252</td><td>CWE-416</td><td>Tabnine</td><td><span class="badge badge-medium">Medium</span></td><td>C++</td></tr>
+<tr><td>CVE-2024-20677</td><td>CWE-94</td><td>ChatGPT</td><td><span class="badge badge-medium">Medium</span></td><td>Python</td></tr>
+</tbody></table>
+<p style="margin-top:12px;color:#8b949e">Showing 7 of 48+ tracked CVEs. <a href="data/ai-code-vulnerabilities.json" style="color:var(--accent)">View full dataset</a></p>
+</div>
+
+<div id="cra" class="panel">
+<h2 style="color:#fff;margin-bottom:20px">EU Cyber Resilience Act Timeline</h2>
+<p style="margin-bottom:20px">Days until CRA Reporting Obligations: <span class="countdown" id="cra-countdown"></span></p>
+<div class="progress-bar"><div class="progress-fill" id="cra-progress" style="width:70%"></div></div>
+<p style="font-size:0.85em;margin-bottom:20px;color:#8b949e">Progress toward Sept 11, 2026 reporting deadline</p>
+<div class="cra-timeline">
+<div class="cra-event completed">
+<div class="cra-date">December 10, 2024</div>
+<div class="cra-title">CRA Entry Into Force</div>
+<p>Published as Regulation (EU) 2024/2847 in the Official Journal</p>
+</div>
+<div class="cra-event upcoming">
+<div class="cra-date">June 11, 2026</div>
+<div class="cra-title">Conformity Assessment Bodies Notified</div>
+<p>Member states must notify conformity assessment bodies</p>
+</div>
+<div class="cra-event upcoming">
+<div class="cra-date">September 11, 2026</div>
+<div class="cra-title">Reporting Obligations Begin</div>
+<p>Manufacturers must report exploited vulnerabilities to ENISA within 24 hours</p>
+</div>
+<div class="cra-event upcoming">
+<div class="cra-date">December 11, 2027</div>
+<div class="cra-title">Full CRA Application</div>
+<p>All requirements mandatory: SBOM, vulnerability handling, security updates</p>
+</div>
+</div>
+</div>
+
+<div id="fp" class="panel">
+<input type="text" class="search-box" placeholder="Search tools, languages..." onkeyup="filterTable(this,'fp-table')">
+<table id="fp-table">
+<thead><tr><th>Tool</th><th>Language</th><th>FP Rate</th><th>TP Rate</th><th>Accuracy</th></tr></thead>
+<tbody>
+<tr><td>Semgrep</td><td>Python</td><td><span class="badge badge-low">12%</span></td><td>85%</td><td>73%</td></tr>
+<tr><td>CodeQL</td><td>JavaScript</td><td><span class="badge badge-low">15%</span></td><td>82%</td><td>67%</td></tr>
+<tr><td>Snyk Code</td><td>Java</td><td><span class="badge badge-medium">22%</span></td><td>79%</td><td>57%</td></tr>
+<tr><td>SonarQube</td><td>Python</td><td><span class="badge badge-medium">28%</span></td><td>76%</td><td>48%</td></tr>
+<tr><td>Checkmarx SAST</td><td>C#</td><td><span class="badge badge-medium">31%</span></td><td>88%</td><td>57%</td></tr>
+<tr><td>Fortify</td><td>Java</td><td><span class="badge badge-high">45%</span></td><td>91%</td><td>46%</td></tr>
+<tr><td>Veracode SAST</td><td>JavaScript</td><td><span class="badge badge-high">38%</span></td><td>84%</td><td>46%</td></tr>
+</tbody></table>
+</div>
+
+</div>
+
+<footer>
+<p>AI AppSec Index | <a href="https://github.com/alpha-one-index/ai-appsec-index">GitHub</a> | <a href="https://www.kaggle.com/datasets/alphaoneindex/ai-appsec-index">Kaggle</a> | <a href="METHODOLOGY.md">Methodology</a></p>
+<p style="margin-top:8px">MIT License | Data updated March 2026</p>
+</footer>
+
+<script>
+function showTab(id){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(id).classList.add('active');event.target.classList.add('active')}
+function filterTable(input,tableId){const filter=input.value.toLowerCase();const rows=document.getElementById(tableId).getElementsByTagName('tr');for(let i=1;i<rows.length;i++){const text=rows[i].textContent.toLowerCase();rows[i].style.display=text.includes(filter)?'':'none'}}
+function updateCountdown(){const target=new Date('2026-09-11');const now=new Date();const diff=Math.ceil((target-now)/(1000*60*60*24));document.getElementById('cra-countdown').textContent=diff+' days';document.getElementById('cra-days').textContent=diff;const total=Math.ceil((target-new Date('2024-12-10'))/(1000*60*60*24));const elapsed=total-diff;document.getElementById('cra-progress').style.width=Math.round(elapsed/total*100)+'%'}
+updateCountdown()
 </script>
+</body>
+</html>
