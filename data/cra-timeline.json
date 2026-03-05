@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "title": "EU Cyber Resilience Act (CRA) Compliance Timeline for AppSec Tools",
+    "version": "1.0.0",
+    "last_updated": "2026-03-05",
+    "regulation": "Regulation (EU) 2024/2847",
+    "entry_into_force": "2024-12-10",
+    "source": "Official Journal of the European Union"
+  },
+  "key_dates": [
+    {
+      "date": "2024-12-10",
+      "milestone": "CRA Entry Into Force",
+      "description": "Published as Regulation (EU) 2024/2847 in the Official Journal",
+      "status": "completed",
+      "impact": "Regulation officially begins 20-day countdown"
+    },
+    {
+      "date": "2026-06-11",
+      "milestone": "Conformity Assessment Bodies Notified",
+      "description": "Member states must notify conformity assessment bodies",
+      "status": "upcoming",
+      "impact": "Assessment infrastructure must be operational"
+    },
+    {
+      "date": "2026-09-11",
+      "milestone": "Reporting Obligations Begin",
+      "description": "Manufacturers must report actively exploited vulnerabilities and severe incidents to ENISA",
+      "status": "upcoming",
+      "impact": "Critical - All AppSec vendors must have vulnerability reporting pipelines",
+      "days_remaining": 190
+    },
+    {
+      "date": "2027-12-11",
+      "milestone": "Full CRA Application",
+      "description": "All CRA requirements become mandatory for products with digital elements",
+      "status": "upcoming",
+      "impact": "Full compliance required - SBOM, vulnerability handling, security updates",
+      "days_remaining": 646
+    }
+  ],
+  "compliance_requirements": [
+    {
+      "id": "CRA-REQ-01",
+      "requirement": "Vulnerability Handling Process",
+      "article": "Article 13(6)",
+      "description": "Manufacturers must identify and document vulnerabilities including open-source components",
+      "appsec_tools_supporting": ["Snyk", "Black Duck", "Mend", "FOSSA", "Sonatype"],
+      "priority": "critical"
+    },
+    {
+      "id": "CRA-REQ-02",
+      "requirement": "SBOM Generation",
+      "article": "Article 13(5)",
+      "description": "Machine-readable SBOM identifying all components in products",
+      "appsec_tools_supporting": ["Syft", "CycloneDX", "SPDX", "Black Duck", "FOSSA", "Snyk"],
+      "priority": "critical"
+    },
+    {
+      "id": "CRA-REQ-03",
+      "requirement": "Security Update Mechanism",
+      "article": "Article 13(8)",
+      "description": "Ensure timely security updates are available and delivered to users",
+      "appsec_tools_supporting": ["Renovate", "Dependabot", "Snyk", "Mend"],
+      "priority": "high"
+    },
+    {
+      "id": "CRA-REQ-04",
+      "requirement": "Incident Reporting to ENISA",
+      "article": "Article 14",
+      "description": "Report actively exploited vulnerabilities within 24 hours, full report within 72 hours",
+      "appsec_tools_supporting": ["ArmorCode", "Invicti ASPM", "Ox Security"],
+      "priority": "critical"
+    },
+    {
+      "id": "CRA-REQ-05",
+      "requirement": "Secure by Default Configuration",
+      "article": "Annex I, Part I(2)",
+      "description": "Products must be delivered with secure default settings",
+      "appsec_tools_supporting": ["Checkov", "tfsec", "KICS", "Bridgecrew"],
+      "priority": "high"
+    },
+    {
+      "id": "CRA-REQ-06",
+      "requirement": "Conformity Assessment",
+      "article": "Article 24-28",
+      "description": "Products must undergo conformity assessment based on risk category",
+      "appsec_tools_supporting": ["Apiiro", "ArmorCode", "Invicti ASPM"],
+      "priority": "high"
+    },
+    {
+      "id": "CRA-REQ-07",
+      "requirement": "Coordinated Vulnerability Disclosure",
+      "article": "Article 15",
+      "description": "Establish policies and procedures for coordinated vulnerability disclosure",
+      "appsec_tools_supporting": ["HackerOne", "Bugcrowd", "Intigriti", "YesWeHack"],
+      "priority": "medium"
+    }
+  ],
+  "open_source_steward_obligations": {
+    "description": "Open source stewards (foundations, maintainers of widely-used FOSS) have lighter obligations",
+    "key_requirements": [
+      "Establish cybersecurity policy for vulnerability handling",
+      "Cooperate with market surveillance authorities",
+      "Facilitate voluntary security attestations",
+      "Support downstream manufacturers with security information"
+    ],
+    "relevant_organizations": ["OpenSSF", "Apache Foundation", "Linux Foundation", "Eclipse Foundation"]
+  },
+  "penalties": {
+    "non_compliance_essential": "Up to EUR 15 million or 2.5% of worldwide annual turnover",
+    "non_compliance_other": "Up to EUR 10 million or 2% of worldwide annual turnover",
+    "incorrect_information": "Up to EUR 5 million or 1% of worldwide annual turnover"
+  }
+}
