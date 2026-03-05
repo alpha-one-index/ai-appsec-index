@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "title": "EU Cyber Resilience Act Compliance Map",
+    "description": "Mapping AI AppSec vendor capabilities to EU CRA requirements and related regulations",
+    "version": "1.0.0",
+    "last_updated": "2025-06-01",
+    "regulation": "Regulation (EU) 2024/2847 — Cyber Resilience Act",
+    "official_source": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj",
+    "enforcement_date": "2027-12-11",
+    "reporting_obligations_date": "2026-09-11",
+    "cross_references": [
+      "https://github.com/alpha-one-index/ai-infra-index",
+      "https://github.com/alpha-one-index/ai-regulation-index"
+    ]
+  },
+  "cra_requirements": [
+    {
+      "requirement_id": "CRA-Art13-1",
+      "article": "Article 13(1)",
+      "title": "Security by Design",
+      "description": "Products with digital elements shall be designed, developed, and produced to ensure an appropriate level of cybersecurity",
+      "annex_reference": "Annex I, Part I",
+      "appsec_relevance": "High",
+      "vendor_coverage": [
+        {"vendor": "Snyk", "coverage": "Full", "capability": "SAST, SCA, container security integrated into SDLC"},
+        {"vendor": "ArmorCode", "coverage": "Full", "capability": "ASPM orchestration across development lifecycle"},
+        {"vendor": "Semgrep", "coverage": "Partial", "capability": "Code analysis with custom rules for security patterns"},
+        {"vendor": "Mend.io", "coverage": "Partial", "capability": "SCA and license compliance for open source components"}
+      ]
+    },
+    {
+      "requirement_id": "CRA-Art13-6",
+      "article": "Article 13(6)",
+      "title": "Vulnerability Handling",
+      "description": "Manufacturers shall identify and document vulnerabilities including open source components, and provide security updates",
+      "annex_reference": "Annex I, Part II",
+      "appsec_relevance": "Critical",
+      "vendor_coverage": [
+        {"vendor": "Snyk", "coverage": "Full", "capability": "Automated vulnerability database with fix PRs"},
+        {"vendor": "Endor Labs", "coverage": "Full", "capability": "Reachability analysis for dependency vulnerabilities"},
+        {"vendor": "Aikido Security", "coverage": "Full", "capability": "All-in-one with AI autofix for vulnerabilities"},
+        {"vendor": "OX Security", "coverage": "Full", "capability": "Pipeline-level vulnerability tracking and correlation"}
+      ]
+    },
+    {
+      "requirement_id": "CRA-Art13-12",
+      "article": "Article 13(12)",
+      "title": "SBOM Requirement",
+      "description": "Manufacturers shall draw up an SBOM including at minimum the top-level dependencies",
+      "annex_reference": "Annex I, Part II, Section 1",
+      "appsec_relevance": "Critical",
+      "vendor_coverage": [
+        {"vendor": "Snyk", "coverage": "Full", "capability": "SBOM generation in CycloneDX and SPDX formats"},
+        {"vendor": "OX Security", "coverage": "Full", "capability": "Pipeline BOM (PBOM) beyond standard SBOM"},
+        {"vendor": "Endor Labs", "coverage": "Full", "capability": "Dependency lifecycle management with SBOM"},
+        {"vendor": "Mend.io", "coverage": "Full", "capability": "SBOM generation and continuous monitoring"}
+      ]
+    },
+    {
+      "requirement_id": "CRA-Art14",
+      "article": "Article 14",
+      "title": "Reporting Obligations",
+      "description": "Manufacturers shall notify ENISA of actively exploited vulnerabilities within 24 hours",
+      "annex_reference": "N/A",
+      "appsec_relevance": "High",
+      "vendor_coverage": [
+        {"vendor": "ArmorCode", "coverage": "Partial", "capability": "Vulnerability prioritization with exploitability data"},
+        {"vendor": "Phoenix Security", "coverage": "Partial", "capability": "Compliance reporting with EU regulation mapping"},
+        {"vendor": "Apiiro", "coverage": "Partial", "capability": "Risk-based alerting for critical vulnerabilities"}
+      ]
+    },
+    {
+      "requirement_id": "CRA-AnnexI-2",
+      "article": "Annex I, Part I, (2)",
+      "title": "Secure Default Configuration",
+      "description": "Products shall be delivered with secure default configurations including ability to reset to original state",
+      "annex_reference": "Annex I, Part I, (2)",
+      "appsec_relevance": "Medium",
+      "vendor_coverage": [
+        {"vendor": "Semgrep", "coverage": "Partial", "capability": "Configuration analysis rules"},
+        {"vendor": "Snyk", "coverage": "Partial", "capability": "IaC security scanning for misconfigurations"},
+        {"vendor": "Cycode", "coverage": "Partial", "capability": "Hardcoded secret detection and config analysis"}
+      ]
+    },
+    {
+      "requirement_id": "CRA-AnnexI-3",
+      "article": "Annex I, Part I, (3)",
+      "title": "Data Protection",
+      "description": "Protect confidentiality and integrity of data, including personal data processing",
+      "annex_reference": "Annex I, Part I, (3)",
+      "appsec_relevance": "High",
+      "vendor_coverage": [
+        {"vendor": "Snyk", "coverage": "Partial", "capability": "Code analysis for data handling patterns"},
+        {"vendor": "Semgrep", "coverage": "Partial", "capability": "Custom rules for PII exposure detection"},
+        {"vendor": "Aikido Security", "coverage": "Partial", "capability": "Secret detection and data leak prevention"}
+      ]
+    },
+    {
+      "requirement_id": "CRA-AnnexI-5",
+      "article": "Annex I, Part I, (5)",
+      "title": "Minimize Attack Surface",
+      "description": "Designed to reduce attack surfaces including external interfaces",
+      "annex_reference": "Annex I, Part I, (5)",
+      "appsec_relevance": "High",
+      "vendor_coverage": [
+        {"vendor": "Apiiro", "coverage": "Full", "capability": "Application risk graph with attack surface mapping"},
+        {"vendor": "ArmorCode", "coverage": "Full", "capability": "Cross-tool correlation identifies full attack surface"},
+        {"vendor": "OX Security", "coverage": "Partial", "capability": "Pipeline and dependency attack surface analysis"}
+      ]
+    }
+  ],
+  "related_regulations": [
+    {
+      "name": "EU AI Act",
+      "regulation_id": "Regulation (EU) 2024/1689",
+      "overlap": "High-risk AI systems must meet cybersecurity requirements aligning with CRA",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    },
+    {
+      "name": "NIS2 Directive",
+      "regulation_id": "Directive (EU) 2022/2555",
+      "overlap": "Supply chain security and incident reporting requirements complement CRA",
+      "source_url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+    },
+    {
+      "name": "DORA",
+      "regulation_id": "Regulation (EU) 2022/2554",
+      "overlap": "Financial sector ICT risk management with software supply chain implications",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"
+    }
+  ]
+}
