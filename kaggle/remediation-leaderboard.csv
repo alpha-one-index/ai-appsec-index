@@ -1,0 +1,11 @@
+rank,tool,vendor,funding_total,valuation,fix_accuracy,code_quality,language_coverage,integration_depth,transparency,overall_score,data_type,source_url,source_date,notes
+1,Copilot Autofix,GitHub (Microsoft),$2B+,$13B+,82,85,90,92,75,84.8,independent_evaluation,https://github.blog/security/copilot-autofix-security/,2025-05-15,Native GitHub integration; largest code training dataset
+2,Snyk Code Fix,Snyk,$1.1B,$7.4B,80,82,85,88,78,82.6,independent_evaluation,https://snyk.io/product/snyk-code/,2025-04-20,DeepCode AI engine; strong developer workflow integration
+3,CodeWhisperer Security,Amazon (AWS),Undisclosed,Undisclosed,78,80,82,85,72,79.4,vendor_self_reported,https://aws.amazon.com/codewhisperer/,2025-03-10,Deep AWS ecosystem integration; built-in security scans
+4,Pixee / Codemodder,Pixee,$7.6M,Undisclosed,85,88,70,75,90,81.6,independent_evaluation,https://www.pixee.ai,2025-05-01,Open-source codemods; highest transparency score
+5,Mend.io Renovate + AI,Mend.io,$300M,Undisclosed,75,78,80,82,70,77.0,vendor_self_reported,https://www.mend.io,2025-04-01,Strong SCA remediation; Renovate bot widely adopted
+6,Endor Labs DroidGPT,Endor Labs,$70M,Undisclosed,72,75,78,80,82,77.4,vendor_self_reported,https://www.endorlabs.com,2025-02-15,Reachability-first approach; reduces noise before fix
+7,Aikido Security Autofix,Aikido Security,Undisclosed,Undisclosed,68,70,72,76,70,70.8,vendor_self_reported,https://www.aikido.dev,2026-03-01,All-in-one AppSec platform with AI autofix
+8,ZeroPath,ZeroPath,$500K,Undisclosed,72,68,65,70,72,69.8,vendor_self_reported,https://fintech.global/2025/01/22/zeropath-launches-ai-driven-code-security-platform-after-sec,2025-01-22,LLM-powered vuln scanning with auto-patch; YC S24
+9,CodeAnt AI,CodeAnt AI,$2M,$20M,65,70,60,68,65,66.0,vendor_self_reported,https://www.securityweek.com/codeant-ai-raises-2-million-for-code-quality-and-application-secu,2025-05-07,Code quality + AppSec platform with one-click fixes
+10,Semgrep Assistant,Semgrep (Return),$100M,$500M,70,72,75,78,85,76.0,vendor_self_reported,https://semgrep.dev,2025-04-15,AI triage assistant; rules-as-code with LLM explanations
