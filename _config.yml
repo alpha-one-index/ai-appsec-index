@@ -1,0 +1,32 @@
+# GitHub Pages Configuration for AI AppSec Index
+title: AI AppSec Index
+description: >-
+  The definitive open-source reference for AI-augmented application security:
+  AI remediation benchmarks, ASPM matrices, AI-code vulnerability tracking,
+  CRA compliance, false positive datasets.
+url: https://alpha-one-index.github.io/ai-appsec-index
+baseurl: /ai-appsec-index
+
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+author:
+  name: Alpha One Index
+  url: https://github.com/alpha-one-index
+
+social:
+  name: Alpha One Index
+  links:
+    - https://github.com/alpha-one-index
+
+google_analytics:
+show_downloads: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
