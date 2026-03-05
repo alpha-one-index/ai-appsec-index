@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "AI AppSec Index",
+  "description": "The definitive open-source reference for AI-augmented application security: AI remediation benchmarks, ASPM matrices, AI-code vulnerability tracking, CRA compliance, false positive datasets.",
+  "url": "https://github.com/alpha-one-index/ai-appsec-index",
+  "license": "https://opensource.org/licenses/MIT",
+  "creator": {
+    "@type": "Organization",
+    "name": "Alpha One Index",
+    "url": "https://github.com/alpha-one-index"
+  },
+  "dateCreated": "2025-03-01",
+  "dateModified": "2025-03-01",
+  "version": "1.0.0",
+  "keywords": [
+    "AI application security",
+    "ASPM",
+    "AI remediation",
+    "vulnerability tracking",
+    "CRA compliance",
+    "false positive benchmark",
+    "AppSec",
+    "AI-code security"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://github.com/alpha-one-index/ai-appsec-index/tree/main/data"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://github.com/alpha-one-index/ai-appsec-index/tree/main/kaggle"
+    }
+  ],
+  "isPartOf": {
+    "@type": "DataCatalog",
+    "name": "Alpha One Index Collection",
+    "url": "https://github.com/alpha-one-index"
+  }
+}
