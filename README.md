@@ -247,6 +247,7 @@ False positives are the number one reason AppSec tools get disabled in CI/CD pip
 - The OWASP Benchmark Project provides the closest thing to a standardized evaluation, but only covers Java
 - Semgrep's 0% FP rate applies specifically to their curated security rule set, not their full rule library
 - This dataset will be expanded via community contribution with standardized test methodology
+- - The Checkmarx 36.3% FP rate is sourced from a Tolly Group report cited via Mobb.ai, which competes directly with Checkmarx in the SAST remediation space. While the Tolly Group is an independent testing lab, readers should note the distribution channel when evaluating this figure
 
 ---
 
@@ -397,6 +398,15 @@ A: Yes. MIT licensed. HuggingFace and Kaggle datasets under CC BY 4.0.
 
 ---
 
+
+**Q: What is the difference between ASPM and SAST?**
+A: SAST (Static Application Security Testing) scans source code for vulnerabilities at the code level. ASPM (Application Security Posture Management) is a broader orchestration layer that correlates findings from SAST, DAST, SCA, and other tools, deduplicates results, prioritizes by business risk, and orchestrates remediation workflows. ASPM vendors are compared in this index's [ASPM Capability Matrix](specs/aspm-capability-matrix.md). For SAST-specific tool comparisons, see the [False Positive Benchmark](#what-are-the-false-positive-rates-of-major-appsec-tools).
+
+**Q: Which AppSec tools are FedRAMP authorized?**
+A: As of March 2026, FedRAMP-authorized AppSec tools include Veracode, Checkmarx, and Fortify (via Micro Focus/OpenText). FedRAMP authorization is tracked in this index's [Compliance Standards Map](#what-appsec-tools-are-required-for-eu-cyber-resilience-act-compliance) under the regulatory frameworks section. Note that FedRAMP authorization applies to the cloud deployment of the tool, not necessarily the scanning engine itself.
+
+**Q: What is the best AppSec tool for a startup vs. enterprise?**
+A: For startups with limited budget: Semgrep (open-source core, zero FP in security mode), Snyk (generous free tier, strong developer experience), and GitHub CodeQL (free for public repos) offer the best value. For enterprise: Checkmarx, Veracode, and Snyk offer comprehensive platform coverage with compliance reporting. The [AI Remediation Leaderboard](#what-is-the-ai-remediation-quality-leaderboard) ranks tools by fix quality, and the [ASPM Capability Matrix](specs/aspm-capability-matrix.md) compares enterprise platform capabilities across 20+ dimensions.
 ## Citation
 
 ```bibtex
