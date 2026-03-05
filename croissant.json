@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/"
+  },
+  "@type": "cr:Dataset",
+  "name": "AI AppSec Index",
+  "description": "The definitive open-source reference index for AI-Augmented Application Security covering AI remediation quality benchmarking, ASPM capability mapping, AI-generated code vulnerability tracking, regulatory compliance mapping, and false positive rate datasets.",
+  "url": "https://github.com/alpha-one-index/ai-appsec-index",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "1.0.0",
+  "datePublished": "2026-03-05",
+  "dateModified": "2026-03-05",
+  "creator": {
+    "@type": "Organization",
+    "name": "Alpha One Index",
+    "url": "https://github.com/alpha-one-index"
+  },
+  "keywords": [
+    "application security",
+    "AI security",
+    "SAST",
+    "ASPM",
+    "false positive benchmark",
+    "AI remediation",
+    "cyber resilience act",
+    "vulnerability detection"
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "name": "remediation-leaderboard",
+      "contentUrl": "data/remediation-leaderboard.json",
+      "encodingFormat": "application/json",
+      "description": "AI fix quality scores for 9 remediation engines"
+    },
+    {
+      "@type": "cr:FileObject",
+      "name": "aspm-capability-matrix",
+      "contentUrl": "data/aspm-capability-matrix.json",
+      "encodingFormat": "application/json",
+      "description": "ASPM vendor capability mapping for 10+ vendors"
+    },
+    {
+      "@type": "cr:FileObject",
+      "name": "ai-code-vulnerabilities",
+      "contentUrl": "data/ai-code-vulnerabilities.json",
+      "encodingFormat": "application/json",
+      "description": "CWE patterns in AI-generated code with 12 tracked patterns"
+    },
+    {
+      "@type": "cr:FileObject",
+      "name": "compliance-map",
+      "contentUrl": "data/compliance-map.json",
+      "encodingFormat": "application/json",
+      "description": "Regulatory compliance requirements mapped to AppSec tooling"
+    },
+    {
+      "@type": "cr:FileObject",
+      "name": "false-positive-rates",
+      "contentUrl": "data/false-positive-rates.json",
+      "encodingFormat": "application/json",
+      "description": "False positive rates by tool, language, and vulnerability class"
+    }
+  ]
+}
