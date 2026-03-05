@@ -46,7 +46,7 @@ The definitive open-source reference for AI-augmented application security.
 
 ```python
 from datasets import load_dataset
-ds = load_dataset("alphaoneindex/ai-appsec-index")
+ds = load_dataset("alpha-one-index/ai-appsec-index")
 ```
 
 Or install the Python package:
@@ -60,7 +60,7 @@ data = ai_appsec_index.load_dataset("remediation-leaderboard")
 
 - [GitHub Repository](https://github.com/alpha-one-index/ai-appsec-index)
 - [Interactive Dashboard](https://alpha-one-index.github.io/ai-appsec-index/)
-- [Kaggle Dataset](https://www.kaggle.com/datasets/alphaoneindex/ai-appsec-index)
+- [Kaggle Dataset](https://www.kaggle.com/datasets/alpha-one-index/ai-appsec-index)
 - [Methodology](https://github.com/alpha-one-index/ai-appsec-index/blob/main/METHODOLOGY.md)
 
 ## Citation
