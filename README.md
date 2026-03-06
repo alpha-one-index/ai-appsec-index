@@ -4,7 +4,7 @@
 [![Data: Auto Updated Weekly](https://img.shields.io/badge/Data-Auto%20Updated%20Weekly-blue.svg)](CHANGELOG.md)
 [![Tools: 30+](https://img.shields.io/badge/Tools-30%2B-green.svg)](specs/vendor-profiles.md)
 [![ASPM Vendors: 15+](https://img.shields.io/badge/ASPM_Vendors-15%2B-blue.svg)](specs/aspm-capability-matrix.md)
-[![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-lightgrey.svg)](CHANGELOG.md)
+[![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-lightgrey.svg)](CHANGELOG.md)
 [![Validation: Self_Auditing](https://img.shields.io/badge/Validation-Self__Auditing-brightgreen.svg)](METHODOLOGY.md)
 [![Croissant: ML_Metadata](https://img.shields.io/badge/Croissant-ML__Metadata-orange.svg)](croissant.json)
 [![Provenance: Documented](https://img.shields.io/badge/Provenance-Documented-blueviolet.svg)](provenance.md)
@@ -422,7 +422,7 @@ A: For startups with limited budget: Semgrep (open-source core, zero FP in secur
   title = {AI AppSec Index: Open AI-Augmented Application Security Intelligence},
   year = {2026},
   publisher = {GitHub},
-  version = {1.0.0},
+  version = {1.1.0},
   url = {https://github.com/alpha-one-index/ai-appsec-index},
   note = {AI remediation quality benchmarks, ASPM capability matrices, AI-generated code vulnerability tracking, EU CRA compliance mapping, and false positive rate datasets. Updated weekly.}
 }
