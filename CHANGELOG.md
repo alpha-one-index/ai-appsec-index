@@ -4,6 +4,18 @@ All notable changes to the AI AppSec Index are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-03-05
+
+### Added
+- `.zenodo.json` for Zenodo academic archive integration
+- FAQ: "What is the best AppSec tool for FedRAMP environments?" with Veracode, Checkmarx, Fortify coverage
+- FAQ: "Which CRA-compliant tools support SBOM generation?" with Cycode, Snyk, OX Security, FOSSA, Anchore
+- Expanded `llms-full.txt` with complete AI-readable content
+
+### Changed
+- README FAQ section now contains 10 questions (up from 8)
+- Commit cadence increased to weekly for freshness signal
+
 ## [1.0.0] - 2026-03-05
 
 ### Added
