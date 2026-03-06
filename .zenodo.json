@@ -1,0 +1,54 @@
+{
+  "title": "AI AppSec Index: AI-Augmented Application Security Intelligence",
+  "description": "A comprehensive open-source reference for AI-augmented application security: AI remediation quality benchmarks, ASPM capability matrices, AI-generated code vulnerability tracking, EU CRA compliance mapping, and false positive rate datasets.",
+  "upload_type": "dataset",
+  "creators": [
+    {
+      "name": "Alpha One Index",
+      "affiliation": "Independent AI Security Research"
+    }
+  ],
+  "keywords": [
+    "application-security",
+    "ai-remediation",
+    "aspm",
+    "sast",
+    "false-positive-rates",
+    "eu-cyber-resilience-act",
+    "ai-code-security",
+    "devsecops",
+    "sbom",
+    "appsec-benchmark"
+  ],
+  "license": {
+    "id": "MIT"
+  },
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/alpha-one-index/ai-appsec-index",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/alpha-one-index/ai-infra-index",
+      "relation": "isPartOf",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/alpha-one-index/ai-llmops-index",
+      "relation": "isPartOf",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/alpha-one-index/ai-red-teaming-index",
+      "relation": "isPartOf",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/alpha-one-index/ai-trism-index",
+      "relation": "isPartOf",
+      "scheme": "url"
+    }
+  ]
+}
