@@ -1,0 +1,28 @@
+name: Update JSON-LD
+on:
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace JSON-LD
+        run: |
+          python3 << 'SCRIPT'
+          import re
+          with open('index.html', 'r') as f:
+              content = f.read()
+          new_jsonld = '{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"AI AppSec Index","url":"https://alpha-one-index.github.io/ai-appsec-index/","publisher":{"@id":"#org"}},{"@type":"Organization","@id":"#org","name":"Alpha One Index","url":"https://github.com/alpha-one-index","sameAs":["https://huggingface.co/alpha-one-index","https://www.kaggle.com/alphaoneindex"]},{"@type":"Dataset","name":"AI AppSec Index","description":"Comprehensive dataset for AI-augmented application security: AI remediation benchmarks, ASPM matrices, AI-code vulnerability tracking, and CRA compliance.","url":"https://github.com/alpha-one-index/ai-appsec-index","license":"https://opensource.org/licenses/MIT","dateModified":"2026-03-06","creator":{"@id":"#org"},"keywords":["AI AppSec","ML security","AI vulnerability","SAST","application security"],"distribution":{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://raw.githubusercontent.com/alpha-one-index/ai-appsec-index/main/data/ai_appsec_vendors.csv"},"variableMeasured":["vendor_name","category","tool_type","cve_coverage","deployment_model"],"measurementTechnique":"Manual research and vendor documentation review"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is AI AppSec?","acceptedAnswer":{"@type":"Answer","text":"AI AppSec covers AI-augmented application security tools including ML vulnerability scanners, SAST/DAST integrations, and AI code security benchmarks."}},{"@type":"Question","name":"How many tools are tracked?","acceptedAnswer":{"@type":"Answer","text":"The AI AppSec Index tracks 70+ security tools across 10 categories."}},{"@type":"Question","name":"What CVE datasets are included?","acceptedAnswer":{"@type":"Answer","text":"The index includes 25+ CVE datasets covering AI-specific vulnerabilities and remediation benchmarks."}},{"@type":"Question","name":"How often is it updated?","acceptedAnswer":{"@type":"Answer","text":"The AI AppSec Index is updated weekly."}},{"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"Yes, MIT licensed and free for security research and vendor evaluation."}}]}]}'
+          content = re.sub(r'(?<=<script type="application/ld.json">\n).*?(?=\n</script>)', new_jsonld, content, flags=re.DOTALL)
+          with open('index.html', 'w') as f:
+              f.write(content)
+          SCRIPT
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "fix: upgrade JSON-LD with @graph, FAQPage, distribution, dateModified"
+          git push
