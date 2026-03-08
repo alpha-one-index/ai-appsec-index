@@ -14,6 +14,16 @@
 > **New:** [AI Remediation Quality Leaderboard](#what-is-the-ai-remediation-quality-leaderboard) | [ASPM Capability Matrix](#what-are-the-leading-aspm-platforms-and-how-do-they-compare) | [AI-Code Vulnerability Tracker](#what-vulnerabilities-does-ai-generated-code-introduce) | [EU CRA Compliance Map](#what-appsec-tools-are-required-for-eu-cyber-resilience-act-compliance) | [False Positive Benchmark](#what-are-the-false-positive-rates-of-major-appsec-tools) | Data updated March 2026
 
 > **Maintained by [Alpha One Index](https://github.com/alpha-one-index)** -- An independent AI production research initiative providing verified, structured data for engineers, security teams, and AI governance professionals.
+>
+> ### Sponsors
+
+> **Support this project** — [Become a sponsor](https://github.com/sponsors/alpha-one-index) and help keep AI AppSec data free, open-source, and accurate.
+
+<!-- sponsors -->
+
+*Your logo here — [Sponsor Alpha One Index](https://github.com/sponsors/alpha-one-index)*
+
+<!-- /sponsors -->
 
 The authoritative open-source reference index for **AI-Augmented Application Security** -- covering AI remediation quality benchmarking, Application Security Posture Management (ASPM) capability mapping, AI-generated code vulnerability tracking, regulatory compliance mapping, and false positive rate datasets for AppSec tools in production. This repository tracks 30+ tools across 6 categories with sourced data, neutral AI fix quality benchmarks across 9+ remediation engines, complete EU Cyber Resilience Act compliance mapping, and the industry's first open false positive rate dataset by tool, language, and vulnerability class.
 
