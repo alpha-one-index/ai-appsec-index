@@ -45,3 +45,6 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This pr
 - Academic research: Fu et al. (2024), Pearce et al. (2022)
 - Regulatory text: EUR-Lex, NIST.gov, PCI SSC
 - Market data: 24MarketReports, TAMradar, CBInsights
+
+## [2026-03-09] - Automated Weekly Update
+- Data refresh completed via GitHub Actions
