@@ -35,18 +35,18 @@ jobs:
       - name: Check CSV integrity
         run: |
           echo "Validating CSV files in kaggle/"
-          python3 -c "
-import csv, sys, os
-for f in sorted(os.listdir('kaggle')):
-    if f.endswith('.csv'):
-        path = os.path.join('kaggle', f)
-        with open(path, 'r') as csvfile:
-            reader = csv.reader(csvfile)
-            header = next(reader)
-            rows = sum(1 for _ in reader)
-            print(f'  {f}: {len(header)} columns, {rows} rows')
-print('All CSV files valid!')
-          "
+          python3 << 'PYEOF'
+          import csv, sys, os
+          for f in sorted(os.listdir('kaggle')):
+              if f.endswith('.csv'):
+                  path = os.path.join('kaggle', f)
+                  with open(path, 'r') as csvfile:
+                      reader = csv.reader(csvfile)
+                      header = next(reader)
+                      rows = sum(1 for _ in reader)
+                      print(f'  {f}: {len(header)} columns, {rows} rows')
+          print('All CSV files valid!')
+          PYEOF
 
       - name: Data summary
         run: |
