@@ -76,7 +76,7 @@
           }
   ],
   "vulnerability_categories": [
-    
+      {
       "cwe_id": "CWE-78",
       "cwe_name": "OS Command Injection",
       "ai_prevalence": "High",
