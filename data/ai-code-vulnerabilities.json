@@ -73,11 +73,10 @@
       "disclosure_date": "2025-12-11",
       "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34291",
       "status": "Patched"
-          },
+          }
   ],
-  
   "vulnerability_categories": [
-    {
+    
       "cwe_id": "CWE-78",
       "cwe_name": "OS Command Injection",
       "ai_prevalence": "High",
