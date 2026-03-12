@@ -35,7 +35,7 @@ jobs:
       - name: Check CSV integrity
         run: |
           echo "Validating CSV files in kaggle/"
-          python -c "
+          python3 -c "
 import csv, sys, os
 for f in sorted(os.listdir('kaggle')):
     if f.endswith('.csv'):
@@ -56,6 +56,6 @@ print('All CSV files valid!')
           echo "Total data size: $(du -sh data/ kaggle/ | tail -1)"
           echo ""
           for f in data/*.json; do
-            entries=$(python -c "import json; d=json.load(open('$f')); print(len(d.get('entries',d.get('tools',d.get('vulnerabilities',d.get('key_dates',d.get('compliance_requirements',d.get('benchmarks',[])))))))); " 2>/dev/null || echo "N/A")
+            entries=$(python3 -c "import json; d=json.load(open('$f')); print(len(d.get('entries',d.get('tools',d.get('vulnerabilities',d.get('key_dates',d.get('compliance_requirements',d.get('benchmarks',[]))))))))" 2>/dev/null || echo "N/A")
             echo "  $(basename $f): $entries entries"
           done
